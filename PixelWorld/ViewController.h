@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *glove;
 @property (strong, nonatomic) IBOutlet UILabel *boot;
 
+- (IBAction)refreshData:(id)sender;
 
 @end
 

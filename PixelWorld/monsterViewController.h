@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *Atk;
 @property (strong, nonatomic) IBOutlet UILabel *Def;
 @property (strong, nonatomic) IBOutlet UILabel *HP;
+@property int floorNum;
 
 - (IBAction)ExitDungeon:(id)sender;
 - (IBAction)NextFloor:(id)sender;

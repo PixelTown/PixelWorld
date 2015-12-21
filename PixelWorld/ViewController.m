@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData:@"xiaofang"];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -155,4 +155,8 @@
 
 
 
+- (IBAction)refreshData:(id)sender {
+    
+    [self loadData:@"xiaofang"];
+}
 @end

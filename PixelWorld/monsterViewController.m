@@ -7,7 +7,7 @@
 //
 
 #import "monsterViewController.h"
-#import "AFNetworking"
+#import "AFNetworking.h"
 
 @interface monsterViewController ()
 
@@ -37,7 +37,9 @@
 
 - (IBAction)ExitDungeon:(id)sender {
     
-    
+    [self requestMonster];
+    self.floorNum = 5;
+    NSLog([NSString stringWithFormat:@"floor is: %d", self.floorNum]);
     
 }
 
@@ -57,7 +59,7 @@
     
     NSLog(@"doing shit now");
     
-    NSDictionary *parameters = @{@"username": Username};
+    NSDictionary *parameters = @{@"username": @"xiaofang"};
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -77,7 +79,24 @@
 
 - (void)requestFighting{
 
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
+    NSLog(@"doing shit now");
+    
+    NSDictionary *parameters = @{@"username": @"xiaofang"};
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:@"http://pixelworld.herokuapp.com/user/getuser" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", string);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 
 }
 

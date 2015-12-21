@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160990791C282359005B5CAA /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B1E1C1DE6A9008BC488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B1D1C1DE6A9008BC488 /* main.m */; };
 		16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B201C1DE6A9008BC488 /* AppDelegate.m */; };
 		16C73B241C1DE6A9008BC488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B231C1DE6A9008BC488 /* ViewController.m */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160990781C282359005B5CAA /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		160990791C282359005B5CAA /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		16C73B191C1DE6A9008BC488 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C73B1D1C1DE6A9008BC488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16C73B1F1C1DE6A9008BC488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				16C73B8C1C27E619008BC488 /* shopViewController.m */,
 				16C73B221C1DE6A9008BC488 /* ViewController.h */,
 				16C73B231C1DE6A9008BC488 /* ViewController.m */,
+				160990781C282359005B5CAA /* MainTabBarController.h */,
+				160990791C282359005B5CAA /* MainTabBarController.m */,
 			);
 			path = PixelWorld;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				16C73B7C1C1DF4B6008BC488 /* AFURLConnectionOperation.m in Sources */,
 				16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */,
 				16C73B831C1DF4B6008BC488 /* UIButton+AFNetworking.m in Sources */,
+				1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */,
 				16C73B811C1DF4B6008BC488 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				16C73B7B1C1DF4B6008BC488 /* AFSecurityPolicy.m in Sources */,
 				16C73B861C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -642,6 +648,7 @@
 				16C73B481C1DE6AA008BC488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16C73B491C1DE6AA008BC488 /* Build configuration list for PBXNativeTarget "PixelWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +657,7 @@
 				16C73B4B1C1DE6AA008BC488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16C73B4C1C1DE6AA008BC488 /* Build configuration list for PBXNativeTarget "PixelWorldUITests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +666,7 @@
 				16C73B4E1C1DE6AA008BC488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
