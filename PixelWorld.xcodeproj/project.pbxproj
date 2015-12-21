@@ -32,6 +32,8 @@
 		16C73B851C1DF4B6008BC488 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B721C1DF4B6008BC488 /* UIProgressView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B861C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B741C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B871C1DF4B6008BC488 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
+		16C73B8A1C27E5EC008BC488 /* monsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B891C27E5EC008BC488 /* monsterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B8C1C27E619008BC488 /* shopViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		16C73B741C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		16C73B751C1DF4B6008BC488 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		16C73B881C27E5EC008BC488 /* monsterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = monsterViewController.h; sourceTree = "<group>"; };
+		16C73B891C27E5EC008BC488 /* monsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = monsterViewController.m; sourceTree = "<group>"; };
+		16C73B8B1C27E619008BC488 /* shopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopViewController.h; sourceTree = "<group>"; };
+		16C73B8C1C27E619008BC488 /* shopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,13 +164,17 @@
 				16C73B4F1C1DF47A008BC488 /* AFNetworking */,
 				16C73B1F1C1DE6A9008BC488 /* AppDelegate.h */,
 				16C73B201C1DE6A9008BC488 /* AppDelegate.m */,
-				16C73B221C1DE6A9008BC488 /* ViewController.h */,
-				16C73B231C1DE6A9008BC488 /* ViewController.m */,
 				16C73B251C1DE6A9008BC488 /* Main.storyboard */,
 				16C73B281C1DE6A9008BC488 /* Assets.xcassets */,
 				16C73B2A1C1DE6A9008BC488 /* LaunchScreen.storyboard */,
 				16C73B2D1C1DE6A9008BC488 /* Info.plist */,
 				16C73B1C1C1DE6A9008BC488 /* Supporting Files */,
+				16C73B881C27E5EC008BC488 /* monsterViewController.h */,
+				16C73B891C27E5EC008BC488 /* monsterViewController.m */,
+				16C73B8B1C27E619008BC488 /* shopViewController.h */,
+				16C73B8C1C27E619008BC488 /* shopViewController.m */,
+				16C73B221C1DE6A9008BC488 /* ViewController.h */,
+				16C73B231C1DE6A9008BC488 /* ViewController.m */,
 			);
 			path = PixelWorld;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 				16C73B7A1C1DF4B6008BC488 /* AFNetworkReachabilityManager.m in Sources */,
 				16C73B7E1C1DF4B6008BC488 /* AFURLResponseSerialization.m in Sources */,
 				16C73B7C1C1DF4B6008BC488 /* AFURLConnectionOperation.m in Sources */,
+				16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */,
 				16C73B831C1DF4B6008BC488 /* UIButton+AFNetworking.m in Sources */,
 				16C73B811C1DF4B6008BC488 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				16C73B7B1C1DF4B6008BC488 /* AFSecurityPolicy.m in Sources */,
@@ -403,6 +414,7 @@
 				16C73B7D1C1DF4B6008BC488 /* AFURLRequestSerialization.m in Sources */,
 				16C73B801C1DF4B6008BC488 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				16C73B7F1C1DF4B6008BC488 /* AFURLSessionManager.m in Sources */,
+				16C73B8A1C27E5EC008BC488 /* monsterViewController.m in Sources */,
 				16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */,
 				16C73B1E1C1DE6A9008BC488 /* main.m in Sources */,
 			);
