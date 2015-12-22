@@ -17,6 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"floorNumber"] != nil) {
+        self.floorNum = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"floorNumber"];
+    }
+    else{
+        self.floorNum = 0;
+    }
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -37,19 +46,34 @@
 
 - (IBAction)ExitDungeon:(id)sender {
     
+    NSLog(@"dungeon reset");
+    self.floorNum = 0;
     [self requestMonster];
-    self.floorNum = 5;
     NSLog([NSString stringWithFormat:@"floor is: %d", self.floorNum]);
     
 }
 
 - (IBAction)NextFloor:(id)sender {
     
-    
+    NSLog(@"go to next floor");
+    self.floorNum = self.floorNum + 1;
+    [self requestMonster];
+    NSLog([NSString stringWithFormat:@"floor is: %d", self.floorNum]);
 }
 
 - (IBAction)PreviousFloor:(id)sender {
     
+    NSLog(@"go to previous floor");
+    self.floorNum = self.floorNum - 1;
+    [self requestMonster];
+    NSLog([NSString stringWithFormat:@"floor is: %d", self.floorNum]);
+}
+
+- (IBAction)FightMonster:(id)sender {
+    
+    NSLog(@"fight this shit");
+    [self requestFighting];
+    NSLog([NSString stringWithFormat:@"floor is: %d", self.floorNum]);
     
 }
 

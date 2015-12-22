@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCO-ba-6gq">
-                                <rect key="frame" x="251" y="471" width="53" height="30"/>
+                                <rect key="frame" x="224" y="335" width="53" height="30"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="refreshData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjo-qj-uaU"/>
@@ -179,21 +179,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCR-F1-Plm">
-                                <rect key="frame" x="114" y="301" width="92" height="30"/>
+                                <rect key="frame" x="114" y="292" width="92" height="30"/>
                                 <state key="normal" title="Exit Dungeon"/>
                                 <connections>
                                     <action selector="ExitDungeon:" destination="rYj-hD-YdZ" eventType="touchUpInside" id="BEN-kZ-lUL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-9Q-ABz">
-                                <rect key="frame" x="125" y="355" width="71" height="30"/>
+                                <rect key="frame" x="125" y="398" width="71" height="30"/>
                                 <state key="normal" title="Next Floor"/>
                                 <connections>
                                     <action selector="NextFloor:" destination="rYj-hD-YdZ" eventType="touchUpInside" id="pmh-tO-T5E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyR-LE-1EX">
-                                <rect key="frame" x="111" y="412" width="98" height="30"/>
+                                <rect key="frame" x="111" y="455" width="98" height="30"/>
                                 <state key="normal" title="Previous Floor"/>
                                 <connections>
                                     <action selector="PreviousFloor:" destination="rYj-hD-YdZ" eventType="touchUpInside" id="t1g-1Z-p5P"/>
@@ -235,6 +235,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwj-UH-VH0">
+                                <rect key="frame" x="143" y="346" width="35" height="30"/>
+                                <state key="normal" title="Fight"/>
+                                <connections>
+                                    <action selector="FightMonster:" destination="rYj-hD-YdZ" eventType="touchUpInside" id="qyb-Xg-Ax5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

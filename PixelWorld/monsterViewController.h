@@ -19,6 +19,7 @@
 - (IBAction)ExitDungeon:(id)sender;
 - (IBAction)NextFloor:(id)sender;
 - (IBAction)PreviousFloor:(id)sender;
+- (IBAction)FightMonster:(id)sender;
 
 
 @end
