@@ -1,5 +1,5 @@
 //
-//  inventoryViewController.h
+//  inventoryTableViewController.h
 //  PixelWorld
 //
 //  Created by Yifang Zhang on 12/22/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface inventoryViewController : UIViewController
+@interface inventoryTableViewController : UITableViewController
 
 @end
