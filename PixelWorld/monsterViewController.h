@@ -14,6 +14,14 @@
 @property (strong, nonatomic) IBOutlet UILabel *Atk;
 @property (strong, nonatomic) IBOutlet UILabel *Def;
 @property (strong, nonatomic) IBOutlet UILabel *HP;
+@property (strong, nonatomic) IBOutlet UILabel *FloorNumber;
+@property (strong, nonatomic) IBOutlet UILabel *monsterDescription;
+
+@property (strong, nonatomic) IBOutlet UIButton *exitDungeonBtn;
+@property (strong, nonatomic) IBOutlet UIButton *fightBtn;
+@property (strong, nonatomic) IBOutlet UIButton *nextFloorBtn;
+@property (strong, nonatomic) IBOutlet UIButton *previousFloorBtn;
+
 @property int floorNum;
 
 - (IBAction)ExitDungeon:(id)sender;

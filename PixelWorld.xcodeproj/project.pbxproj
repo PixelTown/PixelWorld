@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160990791C282359005B5CAA /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		16753A711C2A48A400B7EF40 /* inventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16753A701C2A48A400B7EF40 /* inventoryViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B1E1C1DE6A9008BC488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B1D1C1DE6A9008BC488 /* main.m */; };
 		16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B201C1DE6A9008BC488 /* AppDelegate.m */; };
 		16C73B241C1DE6A9008BC488 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B231C1DE6A9008BC488 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 /* Begin PBXFileReference section */
 		160990781C282359005B5CAA /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		160990791C282359005B5CAA /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		16753A6F1C2A48A400B7EF40 /* inventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inventoryViewController.h; sourceTree = "<group>"; };
+		16753A701C2A48A400B7EF40 /* inventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inventoryViewController.m; sourceTree = "<group>"; };
 		16C73B191C1DE6A9008BC488 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C73B1D1C1DE6A9008BC488 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16C73B1F1C1DE6A9008BC488 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				16C73B231C1DE6A9008BC488 /* ViewController.m */,
 				160990781C282359005B5CAA /* MainTabBarController.h */,
 				160990791C282359005B5CAA /* MainTabBarController.m */,
+				16753A6F1C2A48A400B7EF40 /* inventoryViewController.h */,
+				16753A701C2A48A400B7EF40 /* inventoryViewController.m */,
 			);
 			path = PixelWorld;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C73B771C1DF4B6008BC488 /* AFHTTPRequestOperation.m in Sources */,
+				16753A711C2A48A400B7EF40 /* inventoryViewController.m in Sources */,
 				16C73B841C1DF4B6008BC488 /* UIImageView+AFNetworking.m in Sources */,
 				16C73B241C1DE6A9008BC488 /* ViewController.m in Sources */,
 				16C73B781C1DF4B6008BC488 /* AFHTTPRequestOperationManager.m in Sources */,

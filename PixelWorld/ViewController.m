@@ -146,8 +146,9 @@
         NSLog(@"done");
         
         if([dictionary objectForKey:@"floor"] != nil){
-            int f = (int)[dictionary objectForKey:@"glove"];
-            [[NSUserDefaults standardUserDefaults] setInteger:f forKey:@"floorNumber"];
+            NSString * f = [NSString stringWithFormat:@"%@", [dictionary objectForKey:@"floor"]];
+            NSLog(@"%@", f);
+            [[NSUserDefaults standardUserDefaults] setObject:f forKey:@"floorNumber"];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
          
