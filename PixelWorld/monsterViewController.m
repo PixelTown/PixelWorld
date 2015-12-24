@@ -17,12 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"floorNumber"] != nil) {
-        self.floorNum =  [[NSUserDefaults standardUserDefaults] integerForKey:@"floorNumber"];
+    if ((NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"floorNumber"] != nil) {
+        self.floorNum =  [(NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"floorNumber"] intValue];
+        NSLog(@"loaded floor is %d", self.floorNum);
     }
     else{
         self.floorNum = 0;
     }
+    self.FloorNumber.text = [NSString stringWithFormat:@"Floor %d", self.floorNum];
     [self buttomCheck];
     
     
@@ -41,6 +43,8 @@
         self.floorNum = 0;
     }
     [self buttomCheck];
+    
+    self.FloorNumber.text = [NSString stringWithFormat:@"Floor %d", self.floorNum];
     
 
 }
