@@ -10,4 +10,6 @@
 
 @interface inventoryTableViewController : UITableViewController
 
+@property NSMutableArray * inventoryData;
+
 @end

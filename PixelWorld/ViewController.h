@@ -23,6 +23,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *glove;
 @property (strong, nonatomic) IBOutlet UILabel *boot;
 
+@property NSMutableDictionary *dictionary;
+
 - (IBAction)refreshData:(id)sender;
 
 @end

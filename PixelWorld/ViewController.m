@@ -28,9 +28,13 @@
 
 - (void)loadData: (NSString *) Username {
     
+    //self.dictionary =
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    NSLog(@"doing shit now");
+    NSLog(@"loading the user data");
+    
+    //NSMutableDictionary *dictionary;
     
     NSDictionary *parameters = @{@"username": Username};
     
@@ -44,123 +48,131 @@
         NSLog(@"JSON: %@", string);
         
         NSError * error;
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
-        NSLog(@"dic count :%lu", (unsigned long)dictionary.count);
+        self.dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+        //NSLog(@"dic count :%lu", (unsigned long)self.userStatusDictionary.count);
         
-        for(id key in dictionary) {
-            NSLog(@"key :%@  value :%@", key, [dictionary objectForKey:key]);
-        }
+        /*for(id key in self.userStatusDictionary) {
+         NSLog(@"key :%@  value :%@", key, [self.userStatusDictionary objectForKey:key]);
+         }*/
         
         NSLog(@"yooo####################################yooo");
         
-        if([dictionary objectForKey:@"username"] != nil){
-            self.Username.text = (NSString *)[dictionary objectForKey:@"username"];
-            NSLog(@"username is: %@", [dictionary objectForKey:@"username"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
+        [self dataToInterface];
         
-        if([dictionary objectForKey:@"lv"] != nil){
-            
-            NSString * haha = [NSString stringWithFormat: @"%@", (NSString *)[dictionary objectForKey:@"lv"]];
-            self.Level.text = haha;
-            NSLog(@"level of hero: %@", [dictionary objectForKey:@"lv"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"atk"] != nil){
-            self.Atk.text = [NSString stringWithFormat: @"%@", (NSString *)[dictionary objectForKey:@"atk"]];
-            NSLog(@"attack damage: %@", [dictionary objectForKey:@"atk"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"def"] != nil){
-            self.Def.text = [NSString stringWithFormat: @"%@", (NSString *)[dictionary objectForKey:@"def"]];
-            NSLog(@"defense: %@", [dictionary objectForKey:@"def"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"hp"] != nil){
-            self.HP.text = [NSString stringWithFormat: @"%@", (NSString *)[dictionary objectForKey:@"hp"]];
-            NSLog(@"health point: %@", [dictionary objectForKey:@"hp"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"head"] != nil){
-            self.head.text = (NSString *)[dictionary objectForKey:@"head"];
-            NSLog(@"head equip: %@", [dictionary objectForKey:@"head"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"armor"] != nil){
-            self.armor.text = (NSString *)[dictionary objectForKey:@"armor"];
-            NSLog(@"armor equip: %@", [dictionary objectForKey:@"armor"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"boot"] != nil){
-            self.boot.text = (NSString *)[dictionary objectForKey:@"boot"];
-            NSLog(@"boot equip: %@", [dictionary objectForKey:@"boot"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"left"] != nil){
-            self.left.text = (NSString *)[dictionary objectForKey:@"left"];
-            NSLog(@"left hand: %@", [dictionary objectForKey:@"left"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"right"] != nil){
-            self.right.text = (NSString *)[dictionary objectForKey:@"right"];
-            NSLog(@"right hand: %@", [dictionary objectForKey:@"right"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        if([dictionary objectForKey:@"glove"] != nil){
-            self.glove.text = (NSString *)[dictionary objectForKey:@"glove"];
-            NSLog(@"glove equip: %@", [dictionary objectForKey:@"glove"]);
-        }
-        else{
-            NSLog(@"fuck everything");
-        }
-        
-        NSLog(@"done");
-        
-        if([dictionary objectForKey:@"floor"] != nil){
-            NSString * f = [NSString stringWithFormat:@"%@", [dictionary objectForKey:@"floor"]];
-            NSLog(@"%@", f);
-            [[NSUserDefaults standardUserDefaults] setObject:f forKey:@"floorNumber"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-         
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 
 
+
+    
 }
 
 
+- (void) dataToInterface{
+
+    if([self.dictionary objectForKey:@"username"] != nil){
+        self.Username.text = (NSString *)[self.dictionary objectForKey:@"username"];
+        NSLog(@"username is: %@", [self.dictionary objectForKey:@"username"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"lv"] != nil){
+        
+        NSString * haha = [NSString stringWithFormat: @"%@", (NSString *)[self.dictionary objectForKey:@"lv"]];
+        self.Level.text = haha;
+        NSLog(@"level of hero: %@", [self.dictionary objectForKey:@"lv"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"atk"] != nil){
+        self.Atk.text = [NSString stringWithFormat: @"%@", (NSString *)[self.dictionary objectForKey:@"atk"]];
+        NSLog(@"attack damage: %@", [self.dictionary objectForKey:@"atk"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"def"] != nil){
+        self.Def.text = [NSString stringWithFormat: @"%@", (NSString *)[self.dictionary objectForKey:@"def"]];
+        NSLog(@"defense: %@", [self.dictionary objectForKey:@"def"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"hp"] != nil){
+        self.HP.text = [NSString stringWithFormat: @"%@", (NSString *)[self.dictionary objectForKey:@"hp"]];
+        NSLog(@"health point: %@", [self.dictionary objectForKey:@"hp"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"head"] != nil){
+        self.head.text = (NSString *)[self.dictionary objectForKey:@"head"];
+        NSLog(@"head equip: %@", [self.dictionary objectForKey:@"head"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"armor"] != nil){
+        self.armor.text = (NSString *)[self.dictionary objectForKey:@"armor"];
+        NSLog(@"armor equip: %@", [self.dictionary objectForKey:@"armor"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"boot"] != nil){
+        self.boot.text = (NSString *)[self.dictionary objectForKey:@"boot"];
+        NSLog(@"boot equip: %@", [self.dictionary objectForKey:@"boot"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"left"] != nil){
+        self.left.text = (NSString *)[self.dictionary objectForKey:@"left"];
+        NSLog(@"left hand: %@", [self.dictionary objectForKey:@"left"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"right"] != nil){
+        self.right.text = (NSString *)[self.dictionary objectForKey:@"right"];
+        NSLog(@"right hand: %@", [self.dictionary objectForKey:@"right"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    if([self.dictionary objectForKey:@"glove"] != nil){
+        self.glove.text = (NSString *)[self.dictionary objectForKey:@"glove"];
+        NSLog(@"glove equip: %@", [self.dictionary objectForKey:@"glove"]);
+    }
+    else{
+        NSLog(@"fuck everything");
+    }
+    
+    NSLog(@"done");
+    
+    if([self.dictionary objectForKey:@"floor"] != nil){
+        NSString * f = [NSString stringWithFormat:@"%@", [self.dictionary objectForKey:@"floor"]];
+        NSLog(@"%@", f);
+        [[NSUserDefaults standardUserDefaults] setObject:f forKey:@"floorNumber"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+
+    
+}
 
 - (IBAction)refreshData:(id)sender {
     

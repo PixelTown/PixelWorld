@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160990791C282359005B5CAA /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		1620C8D41C2CDA5D006D1CA1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620C8D21C2CDA5D006D1CA1 /* TableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		1620C8D51C2CDA5D006D1CA1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1620C8D31C2CDA5D006D1CA1 /* TableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		16753A741C2A4FD000B7EF40 /* inventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B1E1C1DE6A9008BC488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B1D1C1DE6A9008BC488 /* main.m */; };
 		16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B201C1DE6A9008BC488 /* AppDelegate.m */; };
@@ -36,6 +38,8 @@
 		16C73B871C1DF4B6008BC488 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B8A1C27E5EC008BC488 /* monsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B891C27E5EC008BC488 /* monsterViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B8C1C27E619008BC488 /* shopViewController.m */; settings = {ASSET_TAGS = (); }; };
+		16F6B4961C2B8D0D00B133B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F6B4951C2B8D0D00B133B6 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		16F6B4991C2B8D1E00B133B6 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F6B4981C2B8D1E00B133B6 /* Inventory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 /* Begin PBXFileReference section */
 		160990781C282359005B5CAA /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		160990791C282359005B5CAA /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		1620C8D11C2CDA5D006D1CA1 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		1620C8D21C2CDA5D006D1CA1 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		1620C8D31C2CDA5D006D1CA1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		16753A721C2A4FD000B7EF40 /* inventoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inventoryTableViewController.h; sourceTree = "<group>"; };
 		16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inventoryTableViewController.m; sourceTree = "<group>"; };
 		16C73B191C1DE6A9008BC488 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +124,10 @@
 		16C73B891C27E5EC008BC488 /* monsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = monsterViewController.m; sourceTree = "<group>"; };
 		16C73B8B1C27E619008BC488 /* shopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopViewController.h; sourceTree = "<group>"; };
 		16C73B8C1C27E619008BC488 /* shopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopViewController.m; sourceTree = "<group>"; };
+		16F6B4941C2B8D0D00B133B6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		16F6B4951C2B8D0D00B133B6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		16F6B4971C2B8D1E00B133B6 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
+		16F6B4981C2B8D1E00B133B6 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +158,13 @@
 		16753A751C2B8B3C00B7EF40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				16F6B4941C2B8D0D00B133B6 /* User.h */,
+				16F6B4951C2B8D0D00B133B6 /* User.m */,
+				16F6B4971C2B8D1E00B133B6 /* Inventory.h */,
+				16F6B4981C2B8D1E00B133B6 /* Inventory.m */,
+				1620C8D11C2CDA5D006D1CA1 /* TableViewCell.h */,
+				1620C8D21C2CDA5D006D1CA1 /* TableViewCell.m */,
+				1620C8D31C2CDA5D006D1CA1 /* TableViewCell.xib */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,7 +192,6 @@
 		16C73B1B1C1DE6A9008BC488 /* PixelWorld */ = {
 			isa = PBXGroup;
 			children = (
-				16753A751C2B8B3C00B7EF40 /* Models */,
 				16C73B4F1C1DF47A008BC488 /* AFNetworking */,
 				16C73B1F1C1DE6A9008BC488 /* AppDelegate.h */,
 				16C73B201C1DE6A9008BC488 /* AppDelegate.m */,
@@ -183,16 +200,8 @@
 				16C73B2A1C1DE6A9008BC488 /* LaunchScreen.storyboard */,
 				16C73B2D1C1DE6A9008BC488 /* Info.plist */,
 				16C73B1C1C1DE6A9008BC488 /* Supporting Files */,
-				16C73B881C27E5EC008BC488 /* monsterViewController.h */,
-				16C73B891C27E5EC008BC488 /* monsterViewController.m */,
-				16C73B8B1C27E619008BC488 /* shopViewController.h */,
-				16C73B8C1C27E619008BC488 /* shopViewController.m */,
-				16C73B221C1DE6A9008BC488 /* ViewController.h */,
-				16C73B231C1DE6A9008BC488 /* ViewController.m */,
-				160990781C282359005B5CAA /* MainTabBarController.h */,
-				160990791C282359005B5CAA /* MainTabBarController.m */,
-				16753A721C2A4FD000B7EF40 /* inventoryTableViewController.h */,
-				16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */,
+				16F6B4931C2B8C2D00B133B6 /* Interfaces */,
+				16753A751C2B8B3C00B7EF40 /* Models */,
 			);
 			path = PixelWorld;
 			sourceTree = "<group>";
@@ -281,6 +290,23 @@
 				16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		16F6B4931C2B8C2D00B133B6 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				16C73B881C27E5EC008BC488 /* monsterViewController.h */,
+				16C73B891C27E5EC008BC488 /* monsterViewController.m */,
+				16C73B8B1C27E619008BC488 /* shopViewController.h */,
+				16C73B8C1C27E619008BC488 /* shopViewController.m */,
+				16C73B221C1DE6A9008BC488 /* ViewController.h */,
+				16C73B231C1DE6A9008BC488 /* ViewController.m */,
+				160990781C282359005B5CAA /* MainTabBarController.h */,
+				160990791C282359005B5CAA /* MainTabBarController.m */,
+				16753A721C2A4FD000B7EF40 /* inventoryTableViewController.h */,
+				16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C73B2C1C1DE6A9008BC488 /* LaunchScreen.storyboard in Resources */,
+				1620C8D51C2CDA5D006D1CA1 /* TableViewCell.xib in Resources */,
 				16C73B291C1DE6A9008BC488 /* Assets.xcassets in Resources */,
 				16C73B271C1DE6A9008BC488 /* Main.storyboard in Resources */,
 			);
@@ -413,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F6B4961C2B8D0D00B133B6 /* User.m in Sources */,
 				16C73B771C1DF4B6008BC488 /* AFHTTPRequestOperation.m in Sources */,
 				16C73B841C1DF4B6008BC488 /* UIImageView+AFNetworking.m in Sources */,
 				16C73B241C1DE6A9008BC488 /* ViewController.m in Sources */,
@@ -432,7 +460,9 @@
 				16C73B791C1DF4B6008BC488 /* AFHTTPSessionManager.m in Sources */,
 				16C73B821C1DF4B6008BC488 /* UIAlertView+AFNetworking.m in Sources */,
 				16C73B7D1C1DF4B6008BC488 /* AFURLRequestSerialization.m in Sources */,
+				16F6B4991C2B8D1E00B133B6 /* Inventory.m in Sources */,
 				16C73B801C1DF4B6008BC488 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				1620C8D41C2CDA5D006D1CA1 /* TableViewCell.m in Sources */,
 				16C73B7F1C1DF4B6008BC488 /* AFURLSessionManager.m in Sources */,
 				16C73B8A1C27E5EC008BC488 /* monsterViewController.m in Sources */,
 				16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */,
