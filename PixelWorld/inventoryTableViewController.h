@@ -11,5 +11,7 @@
 @interface inventoryTableViewController : UITableViewController
 
 @property NSMutableArray * inventoryData;
+@property NSUInteger * selectedRow;
+@property NSDictionary * selectedItem;
 
 @end

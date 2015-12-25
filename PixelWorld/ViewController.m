@@ -115,7 +115,8 @@
     }
     
     if([self.dictionary objectForKey:@"head"] != nil){
-        self.head.text = (NSString *)[self.dictionary objectForKey:@"head"];
+        [self.head setTitle:(NSString *)[self.dictionary objectForKey:@"head"] forState:UIControlStateNormal];
+        //self.head.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"head"];
         NSLog(@"head equip: %@", [self.dictionary objectForKey:@"head"]);
     }
     else{
@@ -123,7 +124,8 @@
     }
     
     if([self.dictionary objectForKey:@"armor"] != nil){
-        self.armor.text = (NSString *)[self.dictionary objectForKey:@"armor"];
+        [self.armor setTitle:(NSString *)[self.dictionary objectForKey:@"armor"] forState:UIControlStateNormal];
+        //self.armor.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"armor"];
         NSLog(@"armor equip: %@", [self.dictionary objectForKey:@"armor"]);
     }
     else{
@@ -131,7 +133,8 @@
     }
     
     if([self.dictionary objectForKey:@"boot"] != nil){
-        self.boot.text = (NSString *)[self.dictionary objectForKey:@"boot"];
+        [self.boot setTitle:(NSString *)[self.dictionary objectForKey:@"boot"] forState:UIControlStateNormal];
+        //self.boot.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"boot"];
         NSLog(@"boot equip: %@", [self.dictionary objectForKey:@"boot"]);
     }
     else{
@@ -139,7 +142,8 @@
     }
     
     if([self.dictionary objectForKey:@"left"] != nil){
-        self.left.text = (NSString *)[self.dictionary objectForKey:@"left"];
+        [self.left setTitle:(NSString *)[self.dictionary objectForKey:@"left"] forState:UIControlStateNormal];
+        //self.left.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"left"];
         NSLog(@"left hand: %@", [self.dictionary objectForKey:@"left"]);
     }
     else{
@@ -147,7 +151,8 @@
     }
     
     if([self.dictionary objectForKey:@"right"] != nil){
-        self.right.text = (NSString *)[self.dictionary objectForKey:@"right"];
+        [self.right setTitle:(NSString *)[self.dictionary objectForKey:@"right"] forState:UIControlStateNormal];
+        //self.right.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"right"];
         NSLog(@"right hand: %@", [self.dictionary objectForKey:@"right"]);
     }
     else{
@@ -155,7 +160,8 @@
     }
     
     if([self.dictionary objectForKey:@"glove"] != nil){
-        self.glove.text = (NSString *)[self.dictionary objectForKey:@"glove"];
+        [self.glove setTitle:(NSString *)[self.dictionary objectForKey:@"glove"] forState:UIControlStateNormal];
+        //self.glove.titleLabel.text = (NSString *)[self.dictionary objectForKey:@"glove"];
         NSLog(@"glove equip: %@", [self.dictionary objectForKey:@"glove"]);
     }
     else{
@@ -172,6 +178,69 @@
     }
 
     
+}
+
+- (void)sendUnequip: (NSString *)itemName andField: (NSString *) field{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSLog(@"loading the user data");
+    
+    //NSMutableDictionary *dictionary;
+    
+    NSDictionary *parameters = @{@"username": @"xiaofang", @"equipment": itemName, @"field": field};
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:@"http://pixelworld.herokuapp.com/equip/unequip" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", string);
+        
+        [self loadData:@"xiaofang"];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+}
+
+- (IBAction)unequipHead:(id)sender {
+    NSString * unequipedItem = self.head.titleLabel.text;
+    NSString * unequipedField = @"head";
+    [self sendUnequip:unequipedItem andField:unequipedField];
+    
+}
+
+- (IBAction)unequipLeft:(id)sender {
+    NSString * unequipedItem = self.left.titleLabel.text;
+    NSString * unequipedField = @"left";
+    [self sendUnequip:unequipedItem andField:unequipedField];
+}
+
+- (IBAction)unequipRight:(id)sender {
+    NSString * unequipedItem = self.right.titleLabel.text;
+    NSString * unequipedField = @"right";
+    [self sendUnequip:unequipedItem andField:unequipedField];
+}
+
+- (IBAction)unequipArmor:(id)sender {
+    NSString * unequipedItem = self.armor.titleLabel.text;
+    NSString * unequipedField = @"armor";
+    [self sendUnequip:unequipedItem andField:unequipedField];
+}
+
+- (IBAction)unequipGlove:(id)sender {
+    NSString * unequipedItem = self.glove.titleLabel.text;
+    NSString * unequipedField = @"glove";
+    [self sendUnequip:unequipedItem andField:unequipedField];
+}
+
+- (IBAction)unequipBoot:(id)sender {
+    NSString * unequipedItem = self.boot.titleLabel.text;
+    NSString * unequipedField = @"boot";
+    [self sendUnequip:unequipedItem andField:unequipedField];
 }
 
 - (IBAction)refreshData:(id)sender {

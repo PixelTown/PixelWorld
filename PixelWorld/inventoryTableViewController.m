@@ -19,13 +19,22 @@
     [super viewDidLoad];
     
     self.inventoryData = [[NSMutableArray alloc] init];
+    self.selectedRow = 0-1;
+    self.selectedItem = [[NSDictionary alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    [self loadInventory:@"xiaofang"];
+    //[self loadInventory:@"xiaofang"];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.inventoryData = [[NSMutableArray alloc] init];
+    [self loadInventory:@"xiaofang"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,10 +79,188 @@
     }
     else if(item.count > 3){ //TODO: this is a equip for now, need modify
         cell.textLabel.text = [item objectForKey:@"name"];
-        cell.detailTextLabel.text = @"this is an equip";
+        //cell.detailTextLabel.text = @"this is an equip";
+        
+        
+        if ([[item objectForKey:@"field"] isEqualToString:@"onehanded"]) {
+            
+            UIButton *buttonLeft = [UIButton buttonWithType:UIButtonTypeSystem];
+            [buttonLeft addTarget:self
+                       action:@selector(equipLeftHand:)
+             forControlEvents:UIControlEventTouchUpInside];
+            [buttonLeft setTitle:@"left" forState:UIControlStateNormal];
+            buttonLeft.frame = CGRectMake(200.0, 10.0, 60.0, 30.0);
+            buttonLeft.tag = row;
+            [cell addSubview:buttonLeft];
+            
+            UIButton *buttonRight = [UIButton buttonWithType:UIButtonTypeSystem];
+            [buttonRight addTarget:self
+                       action:@selector(equipRightHand:)
+             forControlEvents:UIControlEventTouchUpInside];
+            [buttonRight setTitle:@"right" forState:UIControlStateNormal];
+            buttonRight.frame = CGRectMake(250.0, 10.0, 60.0, 30.0);
+            buttonRight.tag = row;
+            [cell addSubview:buttonRight];
+            
+        }
+        
+        else {
+            UIButton *buttonOther = [UIButton buttonWithType:UIButtonTypeSystem];
+            [buttonOther addTarget:self
+                           action:@selector(otherEquip:)
+                 forControlEvents:UIControlEventTouchUpInside];
+            [buttonOther setTitle:@"equip" forState:UIControlStateNormal];
+            buttonOther.frame = CGRectMake(225.0, 10.0, 60.0, 30.0);
+            buttonOther.tag = row;
+            [cell addSubview:buttonOther];
+        }
     }
     
     return cell;
+}
+
+-(void)otherEquip:(UIButton *)sender{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSLog(@"other equip");
+    
+    //NSMutableDictionary *dictionary;
+    NSDictionary * currentItem = [self.inventoryData objectAtIndex:sender.tag];
+    NSString * currentName = [currentItem objectForKey:@"name"];
+    NSString * currentfield = [currentItem objectForKey:@"field"];
+    NSString * currentID = [NSString stringWithFormat:@"%d", (int)sender.tag];
+    
+    NSDictionary *parameters = @{@"username": @"xiaofang", @"equipment": currentName, @"field": currentfield, @"itemid": currentID};
+    
+    NSLog(currentID);
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:@"http://pixelworld.herokuapp.com/equip/wear" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", string);
+        
+        NSError * error;
+        NSDictionary * inventory = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+        NSLog(@"dic count :%lu", (unsigned long)inventory.count);
+        
+        /*for(id key in self.userStatusDictionary) {
+         NSLog(@"key :%@  value :%@", key, [self.userStatusDictionary objectForKey:key]);
+         }*/
+        
+        //NSLog(@"yooo####################################yooo");
+        
+        //[self setTableData: inventory];
+        
+        self.inventoryData = [[NSMutableArray alloc] init];
+        [self loadInventory:@"xiaofang"];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+    
+}
+
+-(void)equipLeftHand:(UIButton *)sender{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSLog(@"other equip");
+    
+    //NSMutableDictionary *dictionary;
+    NSDictionary * currentItem = [self.inventoryData objectAtIndex:sender.tag];
+    NSString * currentName = [currentItem objectForKey:@"name"];
+    NSString * currentfield = [currentItem objectForKey:@"field"];
+    NSString * currentID = [NSString stringWithFormat:@"%d", (int)sender.tag];
+    
+    NSDictionary *parameters = @{@"username": @"xiaofang", @"equipment": currentName, @"field": @"left", @"itemid": currentID};
+    
+    NSLog(currentID);
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:@"http://pixelworld.herokuapp.com/equip/wear" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", string);
+        
+        NSError * error;
+        NSDictionary * inventory = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+        NSLog(@"dic count :%lu", (unsigned long)inventory.count);
+        
+        /*for(id key in self.userStatusDictionary) {
+         NSLog(@"key :%@  value :%@", key, [self.userStatusDictionary objectForKey:key]);
+         }*/
+        
+        //NSLog(@"yooo####################################yooo");
+        
+        //[self setTableData: inventory];
+        
+        self.inventoryData = [[NSMutableArray alloc] init];
+        [self loadInventory:@"xiaofang"];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
+}
+
+-(void)equipRightHand:(UIButton *)sender{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSLog(@"other equip");
+    
+    //NSMutableDictionary *dictionary;
+    NSDictionary * currentItem = [self.inventoryData objectAtIndex:sender.tag];
+    NSString * currentName = [currentItem objectForKey:@"name"];
+    NSString * currentfield = [currentItem objectForKey:@"field"];
+    NSString * currentID = [NSString stringWithFormat:@"%d", (int)sender.tag];
+    
+    NSDictionary *parameters = @{@"username": @"xiaofang", @"equipment": currentName, @"field": @"right", @"itemid": currentID};
+    
+    NSLog(currentID);
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:@"http://pixelworld.herokuapp.com/equip/wear" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", string);
+        
+        NSError * error;
+        NSDictionary * inventory = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+        NSLog(@"dic count :%lu", (unsigned long)inventory.count);
+        
+        /*for(id key in self.userStatusDictionary) {
+         NSLog(@"key :%@  value :%@", key, [self.userStatusDictionary objectForKey:key]);
+         }*/
+        
+        //NSLog(@"yooo####################################yooo");
+        
+        //[self setTableData: inventory];
+        
+        self.inventoryData = [[NSMutableArray alloc] init];
+        [self loadInventory:@"xiaofang"];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
 }
 
 - (void) loadInventory: (NSString *) username{
@@ -129,7 +316,7 @@
     }
     
     NSLog(@"data parsed into inventoryData");
-    NSLog(@"something %@", [self.inventoryData objectAtIndex:0]);
+    //NSLog(@"something %@", [self.inventoryData objectAtIndex:0]);
     [self.tableView reloadData];
     
 }
