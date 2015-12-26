@@ -224,7 +224,7 @@
     //NSMutableDictionary *dictionary;
     NSDictionary * currentItem = [self.inventoryData objectAtIndex:sender.tag];
     NSString * currentName = [currentItem objectForKey:@"name"];
-    NSString * currentfield = [currentItem objectForKey:@"field"];
+    NSString * currentField = [currentItem objectForKey:@"field"];
     NSString * currentID = [NSString stringWithFormat:@"%d", (int)sender.tag];
     
     NSDictionary *parameters = @{@"username": @"xiaofang", @"equipment": currentName, @"field": @"right", @"itemid": currentID};
@@ -303,7 +303,7 @@
 
 -(void) setTableData: (NSDictionary *) inv{
     
-    //[self.inventoryData addObject:<#(nonnull id)#>]
+    //[self.inventoryData addObject:@""]
     NSArray * items = [inv objectForKey:@"items"];
     NSArray * equip = [inv objectForKey:@"equipments"];
     

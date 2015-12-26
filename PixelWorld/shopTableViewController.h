@@ -10,4 +10,6 @@
 
 @interface shopTableViewController : UITableViewController
 
+@property NSMutableArray * recipeArray;
+
 @end
