@@ -10,6 +10,7 @@
 		1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160990791C282359005B5CAA /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 		1620C8D41C2CDA5D006D1CA1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620C8D21C2CDA5D006D1CA1 /* TableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		1620C8D51C2CDA5D006D1CA1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1620C8D31C2CDA5D006D1CA1 /* TableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		1620C8DB1C2E2D19006D1CA1 /* shopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620C8DA1C2E2D19006D1CA1 /* shopTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16753A741C2A4FD000B7EF40 /* inventoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B1E1C1DE6A9008BC488 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B1D1C1DE6A9008BC488 /* main.m */; };
 		16C73B211C1DE6A9008BC488 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B201C1DE6A9008BC488 /* AppDelegate.m */; };
@@ -37,7 +38,6 @@
 		16C73B861C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B741C1DF4B6008BC488 /* UIRefreshControl+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B871C1DF4B6008BC488 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
 		16C73B8A1C27E5EC008BC488 /* monsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B891C27E5EC008BC488 /* monsterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C73B8C1C27E619008BC488 /* shopViewController.m */; settings = {ASSET_TAGS = (); }; };
 		16F6B4961C2B8D0D00B133B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F6B4951C2B8D0D00B133B6 /* User.m */; settings = {ASSET_TAGS = (); }; };
 		16F6B4991C2B8D1E00B133B6 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F6B4981C2B8D1E00B133B6 /* Inventory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -65,6 +65,8 @@
 		1620C8D11C2CDA5D006D1CA1 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		1620C8D21C2CDA5D006D1CA1 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		1620C8D31C2CDA5D006D1CA1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1620C8D91C2E2D19006D1CA1 /* shopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopTableViewController.h; sourceTree = "<group>"; };
+		1620C8DA1C2E2D19006D1CA1 /* shopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopTableViewController.m; sourceTree = "<group>"; };
 		16753A721C2A4FD000B7EF40 /* inventoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inventoryTableViewController.h; sourceTree = "<group>"; };
 		16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inventoryTableViewController.m; sourceTree = "<group>"; };
 		16C73B191C1DE6A9008BC488 /* PixelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +124,6 @@
 		16C73B761C1DF4B6008BC488 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		16C73B881C27E5EC008BC488 /* monsterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = monsterViewController.h; sourceTree = "<group>"; };
 		16C73B891C27E5EC008BC488 /* monsterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = monsterViewController.m; sourceTree = "<group>"; };
-		16C73B8B1C27E619008BC488 /* shopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopViewController.h; sourceTree = "<group>"; };
-		16C73B8C1C27E619008BC488 /* shopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopViewController.m; sourceTree = "<group>"; };
 		16F6B4941C2B8D0D00B133B6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		16F6B4951C2B8D0D00B133B6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		16F6B4971C2B8D1E00B133B6 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
@@ -297,14 +297,14 @@
 			children = (
 				16C73B881C27E5EC008BC488 /* monsterViewController.h */,
 				16C73B891C27E5EC008BC488 /* monsterViewController.m */,
-				16C73B8B1C27E619008BC488 /* shopViewController.h */,
-				16C73B8C1C27E619008BC488 /* shopViewController.m */,
 				16C73B221C1DE6A9008BC488 /* ViewController.h */,
 				16C73B231C1DE6A9008BC488 /* ViewController.m */,
 				160990781C282359005B5CAA /* MainTabBarController.h */,
 				160990791C282359005B5CAA /* MainTabBarController.m */,
 				16753A721C2A4FD000B7EF40 /* inventoryTableViewController.h */,
 				16753A731C2A4FD000B7EF40 /* inventoryTableViewController.m */,
+				1620C8D91C2E2D19006D1CA1 /* shopTableViewController.h */,
+				1620C8DA1C2E2D19006D1CA1 /* shopTableViewController.m */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -442,6 +442,7 @@
 			files = (
 				16F6B4961C2B8D0D00B133B6 /* User.m in Sources */,
 				16C73B771C1DF4B6008BC488 /* AFHTTPRequestOperation.m in Sources */,
+				1620C8DB1C2E2D19006D1CA1 /* shopTableViewController.m in Sources */,
 				16C73B841C1DF4B6008BC488 /* UIImageView+AFNetworking.m in Sources */,
 				16C73B241C1DE6A9008BC488 /* ViewController.m in Sources */,
 				16C73B781C1DF4B6008BC488 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -450,7 +451,6 @@
 				16753A741C2A4FD000B7EF40 /* inventoryTableViewController.m in Sources */,
 				16C73B7E1C1DF4B6008BC488 /* AFURLResponseSerialization.m in Sources */,
 				16C73B7C1C1DF4B6008BC488 /* AFURLConnectionOperation.m in Sources */,
-				16C73B8D1C27E619008BC488 /* shopViewController.m in Sources */,
 				16C73B831C1DF4B6008BC488 /* UIButton+AFNetworking.m in Sources */,
 				1609907A1C282359005B5CAA /* MainTabBarController.m in Sources */,
 				16C73B811C1DF4B6008BC488 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
